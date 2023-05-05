@@ -10,6 +10,11 @@ nav {
     padding-top: 0;
   }
 
+  @media screen and (max-width: 660px) {
+    display: flex;
+    align-items: center;
+  }
+
   .logo {
     padding-left: 5.5rem;
     display: flex;
@@ -20,6 +25,13 @@ nav {
 
     @media screen and (max-width: 900px) {
       padding-left: 3.9rem;
+    }
+
+    img {
+      @media screen and (max-width: 500px) {
+        height: 4rem;
+        width: 4rem;
+      }
     }
 
     .logo-line {
@@ -51,6 +63,7 @@ nav {
     padding-right: 16.5rem;
     padding-left: 12.3rem;
     margin-top: 4.6rem;
+    transition: all 0.4s ease-in-out;
 
     @media screen and (max-width: 1160px) {
       padding-inline: 4rem;
@@ -62,8 +75,30 @@ nav {
     }
 
     //hamburger!
-    @media screen and (max-width: 660px) {
+    @media screen and (max-width: 650px) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.7742px);
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-inline: auto;
+      width: 70vw;
+      z-index: 100;
+      padding-top: 15rem;
+      padding-inline: 5rem;
+      transform: translate(100%);
       display: none;
+      margin-top: 0;
+      gap: 6rem;
+    }
+
+    &.active {
+      transform: translate(0%);
+      display: flex;
     }
 
     a {
@@ -87,10 +122,28 @@ nav {
         letter-spacing: 2.3625px;
       }
 
+      @media screen and (max-width: 650px) {
+        height: auto;
+        font-size: 2.6rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.27rem;
+      }
+
+      @media screen and (max-width: 400px) {
+        height: auto;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.27rem;
+      }
+
       &:hover {
         border-bottom: 0.3rem solid #888888;
-        // mix-blend-mode: normal;
-        // opacity: 0.5;
+
+        @media screen and (max-width: 650px) {
+          border: none;
+          color: $medium-color;
+          opacity: 0.6;
+        }
       }
 
       &:focus {
@@ -104,7 +157,48 @@ nav {
         @media screen and (max-width: 900px) {
           display: none;
         }
+
+        @media screen and (max-width: 650px) {
+          display: flex;
+        }
       }
     }
+  }
+
+  .burger {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 110;
+    padding-right: 3.9rem;
+
+    @media screen and (max-width: 660px) {
+      display: flex;
+    }
+
+    .line {
+      width: 2.4em;
+      height: 0.4em;
+      margin: 0.2em;
+
+      transition: 0.3s ease-in-out;
+      background-color: $medium-color;
+    }
+  }
+
+  .burger.active .line:first-child {
+    transform: translateY(-300px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    transform: rotate(-45deg) translateY(8px);
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(45deg) translateY(-8px);
   }
 }

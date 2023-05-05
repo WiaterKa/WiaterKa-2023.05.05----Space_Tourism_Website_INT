@@ -50,7 +50,19 @@ nav {
       color: $bright-color;
       text-transform: uppercase;
       display: flex;
+      align-items: center;
       justify-content: flex-start;
+      height: 100%;
+
+      &:hover {
+        border-bottom: 0.3rem solid #888888;
+        // mix-blend-mode: normal;
+        // opacity: 0.5;
+      }
+
+      &:focus {
+        border-bottom: 0.3rem solid $bright-color;
+      }
 
       span {
         font-weight: 700;

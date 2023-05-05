@@ -1,11 +1,10 @@
-
-
 .hero {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-inline: 16.5rem;
   padding-bottom: 13rem;
+  padding-top: 5rem;
   height: 100%;
 
   .hero-content {
@@ -54,6 +53,31 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 20;
+      cursor: pointer;
+      // transition: all 0.5s linear;
+
+      &:hover::after {
+        opacity: 0.5;
+        height:0;
+        width: 0;
+      }
+
+      &::after {
+        content: "";
+        height: 45rem;
+        width: 45rem;
+        background-color: white;
+        opacity: 0;
+        z-index: 10;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        transition: all 0.7s linear;
+      }
     }
   }
 }

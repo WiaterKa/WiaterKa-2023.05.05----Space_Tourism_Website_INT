@@ -15,8 +15,7 @@ export default function Home() {
           </p>
         </div>
 
-          <div className="hero-circle">EXPLORE</div>
-
+        <div className="hero-circle">EXPLORE</div>
       </div>
     </section>
   );

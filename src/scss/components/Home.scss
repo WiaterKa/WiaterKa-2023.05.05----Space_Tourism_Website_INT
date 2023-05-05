@@ -7,10 +7,30 @@
   padding-top: 5rem;
   height: 100%;
 
+  @media screen and (max-width: 1160px) {
+    padding-inline: 10rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding-inline: 0rem;
+  }
+
   .hero-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      gap: 15rem;
+      align-items: center;
+      padding-inline: 16rem;
+      // text-align: center;
+    }
+
+    @media screen and (max-width: 780px) {
+      padding-inline: 3rem;
+    }
 
     .text-box {
       width: 40%;
@@ -20,8 +40,22 @@
       justify-content: flex-end;
       gap: 2.4rem;
 
+      @media screen and (max-width: 900px) {
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        padding-top: 10rem;
+      }
+
       .sub-heading {
         @include heading($medium-color);
+
+        @media screen and (max-width: 500px) {
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          text-align: center;
+          letter-spacing: 0.27px;
+        }
       }
 
       h1 {
@@ -31,10 +65,20 @@
         font-size: 15rem;
         line-height: 17.2rem;
         color: $bright-color;
+
+        @media screen and (max-width: 500px) {
+          font-size: 8rem;
+          line-height: 10rem;
+        }
       }
 
       .p-primary {
         @include pPrimary();
+
+        @media screen and (max-width: 500px) {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
       }
     }
 
@@ -56,11 +100,18 @@
       position: relative;
       z-index: 20;
       cursor: pointer;
-      // transition: all 0.5s linear;
+
+      @media screen and (max-width: 500px) {
+        height: 15rem;
+        width: 15rem;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        letter-spacing: 0.125rem;
+      }
 
       &:hover::after {
         opacity: 0.5;
-        height:0;
+        height: 0;
         width: 0;
       }
 
@@ -77,6 +128,11 @@
         transform: translate(-50%, -50%);
         border-radius: 50%;
         transition: all 0.7s linear;
+
+        @media screen and (max-width: 500px) {
+          height: 25rem;
+          width: 25rem;
+        }
       }
     }
   }

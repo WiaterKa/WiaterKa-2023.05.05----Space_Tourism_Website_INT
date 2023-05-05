@@ -5,6 +5,11 @@ nav {
   height: 13.6rem;
   padding-top: 4.6rem;
 
+  @media screen and (max-width: 900px) {
+    height: 9.6rem;
+    padding-top: 0;
+  }
+
   .logo {
     padding-left: 5.5rem;
     display: flex;
@@ -12,6 +17,10 @@ nav {
     width: 40%;
     height: 100%;
     position: relative;
+
+    @media screen and (max-width: 900px) {
+      padding-left: 3.9rem;
+    }
 
     .logo-line {
       background: #ffffff;
@@ -23,6 +32,10 @@ nav {
       top: 4.5rem;
       left: 16rem;
       z-index: 10;
+
+      @media screen and (max-width: 1160px) {
+        display: none;
+      }
     }
   }
 
@@ -39,6 +52,20 @@ nav {
     padding-left: 12.3rem;
     margin-top: 4.6rem;
 
+    @media screen and (max-width: 1160px) {
+      padding-inline: 4rem;
+      width: 70%;
+    }
+
+    @media screen and (max-width: 900px) {
+      gap: 3.7rem;
+    }
+
+    //hamburger!
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
+
     a {
       text-decoration: none;
       font-family: $condensed-font;
@@ -54,6 +81,12 @@ nav {
       justify-content: flex-start;
       height: 100%;
 
+      @media screen and (max-width: 900px) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        letter-spacing: 2.3625px;
+      }
+
       &:hover {
         border-bottom: 0.3rem solid #888888;
         // mix-blend-mode: normal;
@@ -67,6 +100,10 @@ nav {
       span {
         font-weight: 700;
         padding-right: 1.2rem;
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
       }
     }
   }

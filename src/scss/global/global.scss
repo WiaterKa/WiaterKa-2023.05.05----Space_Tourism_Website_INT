@@ -15,4 +15,8 @@ html {
 
 #hero {
   background-image: url("public/home/background-home-desktop.jpg");
+
+  @media screen and (max-width: 900px) {
+    background-image: url("public/home/background-home-tablet.jpg");
+  }
 }

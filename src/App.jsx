@@ -1,20 +1,24 @@
-import "./App.scss";
+import "./scss/App.scss";
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation";
+import { Routes, Route } from "react-router-dom";
 import Home from "./links/Home/Home";
+import Destination from "./links/Destination/Destination";
+import Crew from "./links/Crew/Crew";
+import Technology from "./links/Technology/Technology";
 
 function App() {
   return (
     <>
-      <Home />
-      <HashRouter>
+      <div className="page-wrapper" id="hero">
+        <Navigation />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          {/* <Route path="/destination" component={Destination} />
-          <Route path="/crew" component={Crew} />
-          <Route path="/technology" component={Technology} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/crew" element={<Crew />} />
+          <Route path="/technology" element={<Technology />} />
         </Routes>
-      </HashRouter>
+      </div>
     </>
   );
 }

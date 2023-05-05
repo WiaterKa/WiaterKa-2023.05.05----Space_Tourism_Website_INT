@@ -1,0 +1,33 @@
+//Variables - fonts
+
+$primary-font: "Bellefair", serif;
+$secondary-font: "Barlow", sans-serif;
+$condensed-font: "Barlow Condensed", sans-serif;
+
+//Variables - colors
+
+$bright-color: #ffffff;
+$medium-color: #d0d6f9;
+$dark-color: #0b0d17;
+
+//Mixins
+
+@mixin pPrimary {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: $medium-color;
+}
+
+@mixin heading($color) {
+  font-family: $condensed-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.4725rem;
+  text-transform: uppercase;
+  color: $color;
+}

@@ -6,7 +6,7 @@ import Crew from "../../links/Crew/Crew";
 import Technology from "../../links/Technology/Technology";
 import { useState } from "react";
 
-export default function Navigation() {
+export default function Navigation({ setBcg }) {
   const [isActiveBurg, setsActiveBurg] = useState("");
 
   const handleToggle = () => {
@@ -20,10 +20,22 @@ export default function Navigation() {
         <div className="logo-line"></div>
       </div>
       <div className={`nav-items ${isActiveBurg ? "active" : ""}`}>
-        <Link to="/" element={<Home />}>
+        <Link
+          to="/"
+          element={<Home />}
+          onClick={() => {
+            setBcg("hero");
+          }}
+        >
           <span>00</span> Home
         </Link>
-        <Link to="/destination" element={<Destination />}>
+        <Link
+          to="/destination"
+          element={<Destination />}
+          onClick={() => {
+            setBcg("destination");
+          }}
+        >
           <span>01</span>Destination
         </Link>
         <Link to="/crew" element={<Crew />}>

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-//   transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
 }
 
 html {
@@ -20,4 +20,8 @@ html {
   @media screen and (max-width: 900px) {
     background-image: url("public/home/background-home-tablet.jpg");
   }
+}
+
+#destination {
+  background-image: url("public/destination/background-destination-desktop.jpg");
 }

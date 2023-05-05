@@ -1,25 +1,34 @@
 import "./scss/App.scss";
 import React from "react";
+import { useState } from "react";
 import Navigation from "./components/Navigation/Navigation";
 import { Routes, Route } from "react-router-dom";
 import Home from "./links/Home/Home";
 import Destination from "./links/Destination/Destination";
+import Moon from "./links/Destination/links-destination/Moon";
+import Mars from "./links/Destination/links-destination/Mars";
+import Europa from "./links/Destination/links-destination/Europa";
+import Titan from "./links/Destination/links-destination/Titan";
 import Crew from "./links/Crew/Crew";
 import Technology from "./links/Technology/Technology";
 
 function App() {
+  const [isBcg, setBcg] = useState("hero");
   return (
-    <>
-      <div className="page-wrapper" id="hero">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/destination" element={<Destination />} />
-          <Route path="/crew" element={<Crew />} />
-          <Route path="/technology" element={<Technology />} />
-        </Routes>
-      </div>
-    </>
+    <div className="page-wrapper" id={isBcg}>
+      <Navigation setBcg={setBcg} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/destination" element={<Destination />}>
+          <Route path="moon" element={<Moon />} />
+          <Route path="mars" element={<Mars />} />
+          <Route path="europa" element={<Europa />} />
+          <Route path="titan" element={<Titan />} />
+        </Route>
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/technology" element={<Technology />} />
+      </Routes>
+    </div>
   );
 }
 

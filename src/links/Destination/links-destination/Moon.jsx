@@ -3,7 +3,9 @@ import React from "react";
 export default function Moon() {
   return (
     <div className="container-destination">
-      <div className="img img-moon"></div>
+      <div className="img-container">
+        <div className="img img-moon"></div>
+      </div>
       <div className="txt-box">
         <h2>Moon</h2>
         <p className="p-primary">

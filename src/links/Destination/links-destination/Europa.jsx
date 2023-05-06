@@ -3,7 +3,9 @@ import React from "react";
 export default function Europa() {
   return (
     <div className="container-destination">
-      <div className="img img-europa"></div>
+      <div className="img-container">
+        <div className="img img-europa"></div>
+      </div>
       <div className="txt-box">
         <h2>Europa</h2>
         <p className="p-primary">

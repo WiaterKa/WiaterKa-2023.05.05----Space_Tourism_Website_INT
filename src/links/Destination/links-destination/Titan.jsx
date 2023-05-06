@@ -3,7 +3,9 @@ import React from "react";
 export default function Titan() {
   return (
     <div className="container-destination">
-      <div className="img img-titan"></div>
+      <div className="img-container">
+        <div className="img img-titan"></div>
+      </div>
       <div className="txt-box">
         <h2>Titan</h2>
         <p className="p-primary">

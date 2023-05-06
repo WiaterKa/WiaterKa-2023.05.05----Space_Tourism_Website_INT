@@ -3,7 +3,9 @@ import React from "react";
 export default function Mars() {
   return (
     <div className="container-destination">
-      <div className="img img-mars"></div>
+      <div className="img-container">
+        <div className="img img-mars"></div>
+      </div>
       <div className="txt-box">
         <h2>Mars</h2>
         <p className="p-primary">

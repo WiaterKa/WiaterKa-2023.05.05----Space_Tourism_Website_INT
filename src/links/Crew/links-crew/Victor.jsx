@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationCrew from "../../../components/Navigation-crew/Navigation-crew";
 
-export default function Victor() {
+export default function Victor({ setCurrentCrew }) {
   return (
     <div className="crew-container">
       <div className="txt-box">
@@ -13,7 +13,7 @@ export default function Victor() {
           where he pilots an F/A-18.He was a crew member of Expedition 64, and
           served as a station systems flight engineer.
         </p>
-        <NavigationCrew />
+        <NavigationCrew setCurrentCrew={setCurrentCrew} />
       </div>
       <div className="img-box img-victor"></div>
     </div>

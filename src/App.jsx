@@ -24,18 +24,38 @@ function App() {
       <Navigation setBcg={setBcg} />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/destination" element={<Destination />}>
           <Route path="moon" element={<Moon />} />
           <Route path="mars" element={<Mars />} />
           <Route path="europa" element={<Europa />} />
           <Route path="titan" element={<Titan />} />
         </Route>
-        <Route path="/crew" element={<Crew currentCrew={currentCrew} />}>
-          <Route path="douglas" element={<Douglas setCurrentCrew={setCurrentCrew}/>} />
-          <Route path="mark" element={<Mark setCurrentCrew={setCurrentCrew}/>} />
-          <Route path="victor" element={<Victor />} />
-          <Route path="anousheh" element={<Anousheh />} />
+
+        <Route
+          path="/crew"
+          element={
+            <Crew currentCrew={currentCrew} setCurrentCrew={setCurrentCrew} />
+          }
+        >
+          <Route
+            path="douglas"
+            element={<Douglas setCurrentCrew={setCurrentCrew} />}
+          />
+          <Route
+            path="mark"
+            element={<Mark setCurrentCrew={setCurrentCrew} />}
+          />
+          <Route
+            path="victor"
+            element={<Victor setCurrentCrew={setCurrentCrew} />}
+          />
+          <Route
+            path="anousheh"
+            element={<Anousheh setCurrentCrew={setCurrentCrew} />}
+          />
         </Route>
+
         <Route path="/technology" element={<Technology />} />
       </Routes>
     </div>

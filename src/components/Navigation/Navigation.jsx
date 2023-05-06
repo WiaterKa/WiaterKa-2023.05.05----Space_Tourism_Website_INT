@@ -38,7 +38,11 @@ export default function Navigation({ setBcg }) {
         >
           <span>01</span>Destination
         </Link>
-        <Link to="/crew" element={<Crew />}>
+        <Link to="/crew" 
+        element={<Crew />}
+        onClick={() => {
+            setBcg("crew");
+          }}>
           <span>02</span>Crew
         </Link>
         <Link to="/technology" element={<Technology />}>

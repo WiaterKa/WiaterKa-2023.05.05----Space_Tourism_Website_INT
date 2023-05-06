@@ -15,6 +15,7 @@ import Douglas from "./links/Crew/links-crew/Douglas";
 import Mark from "./links/Crew/links-crew/Mark";
 import Anousheh from "./links/Crew/links-crew/Anousheh";
 import Victor from "./links/Crew/links-crew/Victor";
+import AnimatedPage from "./helpers/AnimatedPage";
 
 function App() {
   const [isBcg, setBcg] = useState("hero");
@@ -38,22 +39,22 @@ function App() {
             <Crew currentCrew={currentCrew} setCurrentCrew={setCurrentCrew} />
           }
         >
-          <Route
-            path="douglas"
-            element={<Douglas setCurrentCrew={setCurrentCrew} />}
-          />
-          <Route
-            path="mark"
-            element={<Mark setCurrentCrew={setCurrentCrew} />}
-          />
-          <Route
-            path="victor"
-            element={<Victor setCurrentCrew={setCurrentCrew} />}
-          />
-          <Route
-            path="anousheh"
-            element={<Anousheh setCurrentCrew={setCurrentCrew} />}
-          />
+          {/* <Route
+              path="douglas"
+              element={<Douglas setCurrentCrew={setCurrentCrew} />}
+            />
+            <Route
+              path="mark"
+              element={<Mark setCurrentCrew={setCurrentCrew} />}
+            />
+            <Route
+              path="victor"
+              element={<Victor setCurrentCrew={setCurrentCrew} />}
+            />
+            <Route
+              path="anousheh"
+              element={<Anousheh setCurrentCrew={setCurrentCrew} />}
+            /> */}
         </Route>
 
         <Route path="/technology" element={<Technology />} />

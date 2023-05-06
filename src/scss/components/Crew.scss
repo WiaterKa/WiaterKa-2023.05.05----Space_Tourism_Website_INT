@@ -1,0 +1,132 @@
+.crew {
+  padding-top: 7.6rem;
+  padding-left: 16.5rem;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  @media screen and (max-width: 1160px) {
+    padding-inline: 10.5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-inline: 2.4rem;
+    justify-content: center;
+  }
+
+  h2 {
+    font-family: $condensed-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.4725rem;
+    text-transform: uppercase;
+    color: $bright-color;
+
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      mix-blend-mode: normal;
+      opacity: 0.25;
+      padding-right: 2.8rem;
+    }
+  }
+
+  .crew-container {
+    height: 100%;
+    display: flex;
+
+    .txt-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 50%;
+
+      .p-heading {
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.2rem;
+        line-height: 3.7rem;
+        text-transform: uppercase;
+        color: $bright-color;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        padding-top: 15rem;
+      }
+
+      h2 {
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.6rem;
+        line-height: 6.4rem;
+        text-transform: uppercase;
+        color: $bright-color;
+        padding-top: 1.5rem;
+      }
+
+      .p-primary {
+        @include pPrimary();
+        padding-bottom: 12rem;
+        padding-top: 2.7rem;
+      }
+
+      .nav-crew {
+        display: flex;
+        gap: 2.4rem;
+        padding-bottom: 9rem;
+
+        .dot {
+          height: 1.5rem;
+          width: 1.5rem;
+          border-radius: 50%;
+          background: $bright-color;
+          mix-blend-mode: normal;
+          opacity: 0.17;
+
+          &:hover {
+            mix-blend-mode: normal;
+            opacity: 0.5;
+          }
+
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .img-box {
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      width: 50%;
+      max-height: 100%;
+    }
+
+    .img-douglas {
+      background-image: url("public/crew/image-douglas-hurley.png");
+    }
+
+    .img-mark {
+      background-image: url("public/crew/image-mark-shuttleworth.png");
+    }
+
+    .img-anousheh {
+      background-image: url("public/crew/image-anousheh-ansari.png");
+    }
+
+    .img-victor {
+      background-image: url("public/crew/image-victor-glover.png");
+    }
+  }
+}

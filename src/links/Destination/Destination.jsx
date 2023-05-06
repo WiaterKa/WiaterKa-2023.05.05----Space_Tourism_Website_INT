@@ -26,7 +26,7 @@ export default function Destination() {
         </Link>
       </div>
       <Outlet />
-      {currentPlanet === "" && <Moon />}
+      {currentPlanet === "" ? <Moon /> : <currentPlanet />}
     </section>
   );
 }

@@ -11,9 +11,14 @@ import Europa from "./links/Destination/links-destination/Europa";
 import Titan from "./links/Destination/links-destination/Titan";
 import Crew from "./links/Crew/Crew";
 import Technology from "./links/Technology/Technology";
+import Douglas from "./links/Crew/links-crew/Douglas";
+import Mark from "./links/Crew/links-crew/Mark";
+import Anousheh from "./links/Crew/links-crew/Anousheh";
+import Victor from "./links/Crew/links-crew/Victor";
 
 function App() {
   const [isBcg, setBcg] = useState("hero");
+  const [currentCrew, setCurrentCrew] = useState("");
   return (
     <div className="page-wrapper" id={isBcg}>
       <Navigation setBcg={setBcg} />
@@ -25,7 +30,12 @@ function App() {
           <Route path="europa" element={<Europa />} />
           <Route path="titan" element={<Titan />} />
         </Route>
-        <Route path="/crew" element={<Crew />} />
+        <Route path="/crew" element={<Crew currentCrew={currentCrew} />}>
+          <Route path="douglas" element={<Douglas setCurrentCrew={setCurrentCrew}/>} />
+          <Route path="mark" element={<Mark setCurrentCrew={setCurrentCrew}/>} />
+          <Route path="victor" element={<Victor />} />
+          <Route path="anousheh" element={<Anousheh />} />
+        </Route>
         <Route path="/technology" element={<Technology />} />
       </Routes>
     </div>

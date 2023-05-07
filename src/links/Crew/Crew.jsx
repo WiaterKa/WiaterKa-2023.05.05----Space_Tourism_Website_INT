@@ -7,7 +7,7 @@ import Anousheh from "./links-crew/Anousheh";
 export default function Crew({ currentCrew, setCurrentCrew }) {
   return (
     <section className="crew">
-      <h2>
+      <h2 className="h2-heading">
         <span>O2</span>Meet your crew
       </h2>
 

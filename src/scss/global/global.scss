@@ -36,4 +36,12 @@ html {
 
 #crew {
   background-image: url("public/crew/background-crew-desktop.jpg");
+
+  @media screen and (max-width: 900px) {
+    background-image: url("public/crew/background-crew-tablet.jpg");
+  }
+
+  // @media screen and (max-width: 450px) {
+  //   background-image: url("public/crew/background-crew-mobile.jpg");
+  // }
 }

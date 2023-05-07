@@ -6,15 +6,14 @@
   align-self: flex-end;
 
   @media screen and (max-width: 1160px) {
-    padding-inline: 10.5rem;
+    padding-left: 10.5rem;
   }
 
-  @media screen and (max-width: 600px) {
-    padding-inline: 2.4rem;
-    justify-content: center;
+  @media screen and (max-width: 960px) {
+    padding-left: 0;
   }
 
-  h2 {
+  .h2-heading {
     font-family: $condensed-font;
     font-style: normal;
     font-weight: 400;
@@ -24,9 +23,17 @@
     text-transform: uppercase;
     color: $bright-color;
 
-    @media screen and (max-width: 600px) {
-      font-size: 16px;
-      line-height: 19px;
+    @media screen and (max-width: 960px) {
+      padding-left: 4rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 1.9rem;
+      line-height: 1.9rem;
       letter-spacing: 2.7px;
       display: flex;
       justify-content: center;
@@ -36,12 +43,36 @@
       mix-blend-mode: normal;
       opacity: 0.25;
       padding-right: 2.8rem;
+
+      @media screen and (max-width: 550px) {
+        padding-right: 1.6rem;
+      }
     }
   }
 
   .crew-container {
-    height: 100%;
+    height: 72rem;
     display: flex;
+
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+      padding-inline: 15rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: auto;
+    }
+
+    @media screen and (max-width: 700px) {
+      padding-inline: 7rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      padding-inline: 2.4rem;
+      flex-direction: column-reverse;
+      padding-top: 3.2rem;
+      gap: 3rem;
+    }
 
     .txt-box {
       display: flex;
@@ -49,6 +80,12 @@
       justify-content: center;
       align-items: flex-start;
       width: 50%;
+      position: relative;
+
+      @media screen and (max-width: 960px) {
+        width: 100%;
+        align-items: center;
+      }
 
       .p-heading {
         font-family: $primary-font;
@@ -61,6 +98,16 @@
         mix-blend-mode: normal;
         opacity: 0.5;
         padding-top: 15rem;
+        width: 100%;
+
+        @media screen and (max-width: 960px) {
+          padding-top: 6rem;
+        }
+
+        @media screen and (max-width: 550px) {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
       }
 
       h2 {
@@ -72,18 +119,48 @@
         text-transform: uppercase;
         color: $bright-color;
         padding-top: 1.5rem;
+
+        @media screen and (max-width: 550px) {
+          font-size: 2.4rem;
+          line-height: 2.8rem;
+        }
       }
 
       .p-primary {
         @include pPrimary();
         padding-bottom: 12rem;
         padding-top: 2.7rem;
+
+        @media screen and (max-width: 960px) {
+          padding-bottom: 4rem;
+          padding-top: 1.6rem;
+        }
+
+        @media screen and (max-width: 550px) {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
       }
 
       .nav-crew {
         display: flex;
         gap: 2.4rem;
         padding-bottom: 9rem;
+        width: 100%;
+
+        @media screen and (max-width: 960px) {
+          justify-content: center;
+        }
+
+        // @media screen and (max-width: 700px) {
+        //   padding-bottom: 0;
+        // }
+
+        @media screen and (max-width: 550px) {
+          align-self: flex-start;
+          position: absolute;
+          top: 1rem;
+        }
 
         .dot {
           height: 1.5rem;
@@ -111,6 +188,16 @@
       background-size: contain;
       width: 50%;
       max-height: 100%;
+
+      @media screen and (max-width: 960px) {
+        height: 57rem;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 550px) {
+        max-height: 35rem;
+        border-bottom: solid 1px #383b4b;
+      }
     }
 
     .img-douglas {

@@ -45,3 +45,11 @@ html {
   //   background-image: url("public/crew/background-crew-mobile.jpg");
   // }
 }
+
+#technology {
+  background-image: url("public/technology/background-technology-desktop.jpg");
+
+  @media screen and (max-width: 900px) {
+    background-image: url("public/technology/background-technology-tablet.jpg");
+  }
+}

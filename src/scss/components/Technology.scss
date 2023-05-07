@@ -1,0 +1,257 @@
+.technology {
+  padding-top: 7.6rem;
+  padding-left: 16.5rem;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  @media screen and (max-width: 1160px) {
+    padding-left: 10.5rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding-left: 0;
+  }
+
+  .h2-heading {
+    font-family: $condensed-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.4725rem;
+    text-transform: uppercase;
+    color: $bright-color;
+
+    @media screen and (max-width: 960px) {
+      padding-left: 4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.9rem;
+      line-height: 1.9rem;
+      letter-spacing: 2.7px;
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      mix-blend-mode: normal;
+      opacity: 0.25;
+      padding-right: 2.8rem;
+
+      @media screen and (max-width: 550px) {
+        padding-right: 1.6rem;
+      }
+    }
+  }
+
+  .technology-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10rem;
+    padding-top: 2.6rem;
+    position: relative;
+
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
+
+    .nav-technology {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      padding-top: 11rem;
+
+      .active {
+        background-color: $bright-color;
+        color: $dark-color;
+      }
+
+      #launched {
+        background-color: $bright-color;
+        color: $dark-color;
+      }
+
+      @media screen and (max-width: 960px) {
+        flex-direction: row;
+        padding-top: 45rem;
+      }
+
+      @media screen and (max-width: 760px) {
+        padding-top: 40rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding-top: 30rem;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.2rem;
+        line-height: 3.7rem;
+        text-align: center;
+        letter-spacing: 2px;
+        color: $bright-color;
+        opacity: 1 !important;
+        text-decoration: none;
+        border-radius: 50%;
+
+        @media screen and (max-width: 600px) {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      .circle {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        mix-blend-mode: normal;
+        // opacity: 0.25;
+        border: 1px solid darkgrey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 600px) {
+          height: 4rem;
+          width: 4rem;
+        }
+
+        &:hover {
+          border: 1px solid $bright-color;
+        }
+      }
+    }
+
+    .txt-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 11rem;
+      padding-right: 10rem;
+      padding-left: 8rem;
+      width: 50%;
+
+      @media screen and (max-width: 960px) {
+        width: 100%;
+        padding-inline: 15.5rem;
+        text-align: center;
+        align-items: center;
+        padding-top: 4.4rem;
+      }
+
+      @media screen and (max-width: 760px) {
+        padding-inline: 7rem;
+      }
+
+      .p-heading {
+        font-family: $condensed-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        letter-spacing: 2.7px;
+        color: $medium-color;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 600px) {
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      h2 {
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.6rem;
+        line-height: 6.6rem;
+        color: $bright-color;
+        padding-top: 1.1rem;
+        padding-bottom: 1.7rem;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 600px) {
+          font-size: 2.4rem;
+          line-height: 2.8rem;
+        }
+      }
+
+      .p-primary {
+        @include pPrimary();
+
+        @media screen and (max-width: 600px) {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+
+    .img-box {
+      height: 53rem;
+      width: 40%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      align-self: flex-end;
+
+      @media screen and (max-width: 960px) {
+        position: absolute;
+        top: 0rem;
+        width: 100%;
+        background-size: contain;
+        background-position: bottom;
+        height: 40rem;
+      }
+
+      @media screen and (max-width: 760px) {
+        height: 35rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        height: 25rem;
+        margin-top: 3.2rem;
+      }
+
+      @media screen and (max-width: 450px) {
+        height: 20rem;
+      }
+    }
+
+    .launch-img {
+      background-image: url("public/technology/image-launch-vehicle-portrait.jpg");
+
+      @media screen and (max-width: 960px) {
+        background-image: url("public/technology/image-launch-vehicle-landscape.jpg");
+      }
+    }
+
+    .spaceport-img {
+      background-image: url("public/technology/image-spaceport-portrait.jpg");
+
+      @media screen and (max-width: 960px) {
+        background-image: url("public/technology/image-spaceport-landscape.jpg");
+      }
+    }
+
+    .capsule-img {
+      background-image: url("public/technology/image-space-capsule-portrait.jpg");
+
+      @media screen and (max-width: 960px) {
+        background-image: url("public/technology/image-space-capsule-landscape.jpg");
+      }
+    }
+  }
+}

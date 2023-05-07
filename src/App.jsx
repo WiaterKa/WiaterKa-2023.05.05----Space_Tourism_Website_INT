@@ -11,11 +11,14 @@ import Europa from "./links/Destination/links-destination/Europa";
 import Titan from "./links/Destination/links-destination/Titan";
 import Crew from "./links/Crew/Crew";
 import Technology from "./links/Technology/Technology";
-import Douglas from "./links/Crew/links-crew/Douglas";
-import Mark from "./links/Crew/links-crew/Mark";
-import Anousheh from "./links/Crew/links-crew/Anousheh";
-import Victor from "./links/Crew/links-crew/Victor";
-import AnimatedPage from "./helpers/AnimatedPage";
+// import Douglas from "./links/Crew/links-crew/Douglas";
+// import Mark from "./links/Crew/links-crew/Mark";
+// import Anousheh from "./links/Crew/links-crew/Anousheh";
+// import Victor from "./links/Crew/links-crew/Victor";
+// import AnimatedPage from "./helpers/AnimatedPage";
+import Capsule from "./links/Technology/links-technology/Capsule";
+import Spaceport from "./links/Technology/links-technology/Spaceport";
+import Launch from "./links/Technology/links-technology/Launch";
 
 function App() {
   const [isBcg, setBcg] = useState("hero");
@@ -57,7 +60,11 @@ function App() {
             /> */}
         </Route>
 
-        <Route path="/technology" element={<Technology />} />
+        <Route path="/technology" element={<Technology />}>
+          <Route path="launch" element={<Launch />} />
+          <Route path="spaceport" element={<Spaceport />} />
+          <Route path="capsule" element={<Capsule />} />
+        </Route>
       </Routes>
     </div>
   );

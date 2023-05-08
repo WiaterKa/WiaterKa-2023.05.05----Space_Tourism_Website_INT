@@ -25,12 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setBcg={setBcg} />} />
 
-        <Route path="/destination" element={<Destination setBcg={setBcg} />}>
-          <Route path="moon" element={<Moon />} />
-          <Route path="mars" element={<Mars />} />
-          <Route path="europa" element={<Europa />} />
-          <Route path="titan" element={<Titan />} />
-        </Route>
+        <Route path="/destination/*" element={<Destination setBcg={setBcg} />} />
 
         <Route path="/crew/*" element={<Crew setBcg={setBcg} />} />
 

@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Douglas() {
   return (
-    <div className="crew-container">
+    <motion.div
+    className="crew-container"
+      initial={{ x: "100rem" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="txt-box">
         <p className="p-heading">Comander</p>
         <h2>Douglas Hurley</h2>
@@ -13,6 +19,6 @@ export default function Douglas() {
         </p>
       </div>
       <div className="img-box img-douglas"></div>
-    </div>
+    </motion.div>
   );
 }

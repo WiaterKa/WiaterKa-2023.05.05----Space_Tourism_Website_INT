@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Victor() {
   return (
-    <div className="crew-container">
+    <motion.div
+      className="crew-container"
+      initial={{ x: "100rem" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="txt-box">
         <p className="p-heading">Pilot</p>
         <h2>Victor Glover</h2>
@@ -14,6 +20,6 @@ export default function Victor() {
         </p>
       </div>
       <div className="img-box img-victor"></div>
-    </div>
+    </motion.div>
   );
 }

@@ -11,23 +11,19 @@ import Europa from "./links/Destination/links-destination/Europa";
 import Titan from "./links/Destination/links-destination/Titan";
 import Crew from "./links/Crew/Crew";
 import Technology from "./links/Technology/Technology";
-// import Douglas from "./links/Crew/links-crew/Douglas";
-// import Mark from "./links/Crew/links-crew/Mark";
-// import Anousheh from "./links/Crew/links-crew/Anousheh";
-// import Victor from "./links/Crew/links-crew/Victor";
-// import AnimatedPage from "./helpers/AnimatedPage";
+
 import Capsule from "./links/Technology/links-technology/Capsule";
 import Spaceport from "./links/Technology/links-technology/Spaceport";
 import Launch from "./links/Technology/links-technology/Launch";
 
 function App() {
   const [isBcg, setBcg] = useState("hero");
-  const [currentCrew, setCurrentCrew] = useState("");
+
   return (
     <div className="page-wrapper" id={isBcg}>
       <Navigation setBcg={setBcg} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setBcg={setBcg}/>} />
 
         <Route path="/destination" element={<Destination />}>
           <Route path="moon" element={<Moon />} />
@@ -39,26 +35,9 @@ function App() {
         <Route
           path="/crew"
           element={
-            <Crew currentCrew={currentCrew} setCurrentCrew={setCurrentCrew} />
+            <Crew/>
           }
-        >
-          {/* <Route
-              path="douglas"
-              element={<Douglas setCurrentCrew={setCurrentCrew} />}
-            />
-            <Route
-              path="mark"
-              element={<Mark setCurrentCrew={setCurrentCrew} />}
-            />
-            <Route
-              path="victor"
-              element={<Victor setCurrentCrew={setCurrentCrew} />}
-            />
-            <Route
-              path="anousheh"
-              element={<Anousheh setCurrentCrew={setCurrentCrew} />}
-            /> */}
-        </Route>
+        />
 
         <Route path="/technology" element={<Technology />}>
           <Route path="launch" element={<Launch />} />

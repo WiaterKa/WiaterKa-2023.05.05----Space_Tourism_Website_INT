@@ -65,7 +65,7 @@
     }
 
     a {
-      color: $bright-color;
+      color: $medium-color;
       text-decoration: none;
       text-transform: uppercase;
       margin-right: 2.7rem;
@@ -77,8 +77,13 @@
       }
 
       &:hover {
-        border-bottom: 3px solid $bright-color;
+        border-bottom: 3px solid grey;
       }
+    }
+
+    .active {
+      border-bottom: 3px solid $bright-color;
+      color: $bright-color;
     }
   }
 

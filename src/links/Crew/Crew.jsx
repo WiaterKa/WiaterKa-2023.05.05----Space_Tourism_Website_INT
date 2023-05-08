@@ -3,8 +3,10 @@ import Douglas from "./links-crew/Douglas";
 import Mark from "./links-crew/Mark";
 import Victor from "./links-crew/Victor";
 import Anousheh from "./links-crew/Anousheh";
+import { useState } from "react";
 
-export default function Crew({ currentCrew, setCurrentCrew }) {
+export default function Crew() {
+  const [currentCrew, setCurrentCrew] = useState("");
   return (
     <section className="crew">
       <h2 className="h2-heading">

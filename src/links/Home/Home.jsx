@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home({ setBcg }) {
   return (
     <section className="hero">
       <div className="hero-content">
@@ -15,7 +16,14 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="hero-circle">EXPLORE</div>
+        <Link
+          to="/destination/moon"
+          onClick={() => {
+            setBcg("destination");
+          }}
+        >
+          <div className="hero-circle">EXPLORE</div>
+        </Link>
       </div>
     </section>
   );

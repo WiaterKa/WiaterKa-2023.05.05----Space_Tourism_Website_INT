@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Moon from "./links-destination/Moon";
 // import Mars from "./links-destination/Mars";
 // import Europa from "./links-destination/Europa";
@@ -14,29 +14,33 @@ export default function Destination() {
         <span>O1</span>Pick Your Destination
       </h2>
       <div className="nav-planets">
-        <Link to="/destination/moon">Moon</Link>
-        <Link to="/destination/mars" onClick={() => setCurrentPlanet("Mars")}>
+        <NavLink
+          to="/destination/moon"
+          onClick={() => setCurrentPlanet("Moon")}
+        >
+          Moon
+        </NavLink>
+        <NavLink
+          to="/destination/mars"
+          onClick={() => setCurrentPlanet("Mars")}
+        >
           Mars
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
+          onClick={() => setCurrentPlanet("Europa")}
           to="/destination/europa"
-          // onClick={() => setCurrentPlanet("Europa")}
         >
           Europa
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
+          onClick={() => setCurrentPlanet("Titan")}
           to="/destination/titan"
-          // onClick={() => setCurrentPlanet("Titan")}
         >
           Titan
-        </Link>
+        </NavLink>
       </div>
       <Outlet />
-      {currentPlanet === "" && <Moon />}
-      {/* {currentPlanet === "Moon" && <Moon />}
-      {currentPlanet === "Mars" && <Mars />}
-      {currentPlanet === "Europa" && <Europa />}
-      {currentPlanet === "Titan" && <Titan />} */}
+      {/* {currentPlanet === "" && <Moon />} */}
     </section>
   );
 }

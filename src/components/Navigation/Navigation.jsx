@@ -16,7 +16,14 @@ export default function Navigation({ setBcg }) {
   return (
     <nav>
       <div className="logo">
-        <img src="public/shared/logo.svg" alt="logo" />
+        <Link
+          to="/"
+          onClick={() => {
+            setBcg("hero");
+          }}
+        >
+          <img src="public/shared/logo.svg" alt="logo" />
+        </Link>
         <div className="logo-line"></div>
       </div>
       <div className={`nav-items ${isActiveBurg ? "active" : ""}`}>
@@ -30,7 +37,7 @@ export default function Navigation({ setBcg }) {
           <span>00</span> Home
         </Link>
         <Link
-          to="/destination"
+          to="/destination/moon"
           element={<Destination />}
           onClick={() => {
             setBcg("destination");

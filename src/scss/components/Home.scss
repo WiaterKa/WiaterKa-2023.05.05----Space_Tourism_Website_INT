@@ -101,6 +101,8 @@
       z-index: 20;
       cursor: pointer;
 
+
+
       @media screen and (max-width: 500px) {
         height: 15rem;
         width: 15rem;
@@ -135,5 +137,8 @@
         }
       }
     }
+  }
+  a {
+    text-decoration: none;
   }
 }

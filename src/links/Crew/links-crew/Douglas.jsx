@@ -1,7 +1,6 @@
 import React from "react";
-import NavigationCrew from "../../../components/Navigation-crew/Navigation-crew";
 
-export default function Douglas({ setCurrentCrew }) {
+export default function Douglas() {
   return (
     <div className="crew-container">
       <div className="txt-box">
@@ -12,7 +11,6 @@ export default function Douglas({ setCurrentCrew }) {
           pilot and former NASA astronaut. He launched into space for the third
           time as commander of Crew Dragon Demo-2.
         </p>
-        <NavigationCrew setCurrentCrew={setCurrentCrew} />
       </div>
       <div className="img-box img-douglas"></div>
     </div>

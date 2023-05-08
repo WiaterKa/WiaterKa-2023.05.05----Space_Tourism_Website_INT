@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Moon from "./links-destination/Moon";
@@ -6,8 +7,13 @@ import Moon from "./links-destination/Moon";
 // import Europa from "./links-destination/Europa";
 // import Titan from "./links-destination/Titan";
 
-export default function Destination() {
+export default function Destination({ setBcg }) {
   const [currentPlanet, setCurrentPlanet] = useState("");
+
+  useEffect(() => {
+    setBcg("destination");
+  }, []);
+
   return (
     <section className="destination">
       <h2>

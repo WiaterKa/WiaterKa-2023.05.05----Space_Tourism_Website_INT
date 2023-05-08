@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Home({ setBcg }) {
+  useEffect(() => {
+    setBcg("hero");
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -16,12 +21,7 @@ export default function Home({ setBcg }) {
           </p>
         </div>
 
-        <Link
-          to="/destination/moon"
-          onClick={() => {
-            setBcg("destination");
-          }}
-        >
+        <Link to="/destination/moon">
           <div className="hero-circle">EXPLORE</div>
         </Link>
       </div>

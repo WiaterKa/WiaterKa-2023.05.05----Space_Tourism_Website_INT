@@ -23,23 +23,18 @@ function App() {
     <div className="page-wrapper" id={isBcg}>
       <Navigation setBcg={setBcg} />
       <Routes>
-        <Route path="/" element={<Home setBcg={setBcg}/>} />
+        <Route path="/" element={<Home setBcg={setBcg} />} />
 
-        <Route path="/destination" element={<Destination />}>
+        <Route path="/destination" element={<Destination setBcg={setBcg} />}>
           <Route path="moon" element={<Moon />} />
           <Route path="mars" element={<Mars />} />
           <Route path="europa" element={<Europa />} />
           <Route path="titan" element={<Titan />} />
         </Route>
 
-        <Route
-          path="/crew"
-          element={
-            <Crew/>
-          }
-        />
+        <Route path="/crew" element={<Crew setBcg={setBcg} />} />
 
-        <Route path="/technology" element={<Technology />}>
+        <Route path="/technology" element={<Technology setBcg={setBcg} />}>
           <Route path="launch" element={<Launch />} />
           <Route path="spaceport" element={<Spaceport />} />
           <Route path="capsule" element={<Capsule />} />

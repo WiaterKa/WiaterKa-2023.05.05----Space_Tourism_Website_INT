@@ -1,7 +1,6 @@
 import React from "react";
-import NavigationCrew from "../../../components/Navigation-crew/Navigation-crew";
 
-export default function Anousheh({ setCurrentCrew }) {
+export default function Anousheh() {
   return (
     <div className="crew-container">
       <div className="txt-box">
@@ -13,7 +12,6 @@ export default function Anousheh({ setCurrentCrew }) {
           first self-funded woman to fly to the ISS, and the first Iranian in
           space.
         </p>
-        <NavigationCrew setCurrentCrew={setCurrentCrew} />
       </div>
       <div className="img-box img-anousheh"></div>
     </div>

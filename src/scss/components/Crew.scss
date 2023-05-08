@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+  position: relative;
 
   @media screen and (max-width: 1160px) {
     padding-left: 10.5rem;
@@ -51,16 +52,16 @@
   }
 
   .crew-container {
-    height: 72rem;
+    height: auto;
     display: flex;
 
     @media screen and (max-width: 960px) {
       flex-direction: column;
-      padding-inline: 15rem;
+      padding-inline: 12rem;
       align-items: center;
-      justify-content: center;
       text-align: center;
-      height: auto;
+      justify-content: flex-start;
+      gap: 10rem;
     }
 
     @media screen and (max-width: 700px) {
@@ -71,7 +72,7 @@
       padding-inline: 2.4rem;
       flex-direction: column-reverse;
       padding-top: 3.2rem;
-      gap: 3rem;
+      gap: 6rem;
     }
 
     .txt-box {
@@ -80,11 +81,14 @@
       justify-content: center;
       align-items: flex-start;
       width: 50%;
+      // height: 65rem;
       position: relative;
+      height: auto;
 
       @media screen and (max-width: 960px) {
         width: 100%;
         align-items: center;
+        justify-content: flex-start;
       }
 
       .p-heading {
@@ -141,57 +145,22 @@
           line-height: 2.5rem;
         }
       }
-
-      .nav-crew {
-        display: flex;
-        gap: 2.4rem;
-        padding-bottom: 9rem;
-        width: 100%;
-
-        @media screen and (max-width: 960px) {
-          justify-content: center;
-        }
-
-        // @media screen and (max-width: 700px) {
-        //   padding-bottom: 0;
-        // }
-
-        @media screen and (max-width: 550px) {
-          align-self: flex-start;
-          position: absolute;
-          top: 1rem;
-        }
-
-        .dot {
-          height: 1.5rem;
-          width: 1.5rem;
-          border-radius: 50%;
-          background: $bright-color;
-          mix-blend-mode: normal;
-          opacity: 0.17;
-
-          &:hover {
-            mix-blend-mode: normal;
-            opacity: 0.5;
-          }
-
-          &:focus {
-            opacity: 1;
-          }
-        }
-      }
     }
 
     .img-box {
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
-      width: 50%;
-      max-height: 100%;
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
 
       @media screen and (max-width: 960px) {
-        height: 57rem;
+        height: 53rem;
         width: 100%;
+        position: static;
       }
 
       @media screen and (max-width: 550px) {
@@ -216,4 +185,45 @@
       background-image: url("public/crew/image-victor-glover.png");
     }
   }
+}
+
+.nav-crew {
+  display: flex;
+  gap: 2.4rem;
+  padding-bottom: 9rem;
+  width: 100%;
+
+  @media screen and (max-width: 960px) {
+    justify-content: center;
+    position: absolute;
+    bottom: 50rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    align-self: flex-start;
+    position: absolute;
+    top: 53rem;
+  }
+
+  .dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: $bright-color;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+
+    &:hover {
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+[datatype="active"] {
+  opacity: 1 !important;
 }

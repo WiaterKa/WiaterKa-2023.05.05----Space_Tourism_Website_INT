@@ -1,8 +1,7 @@
 import React from "react";
 
-import NavigationCrew from "../../../components/Navigation-crew/Navigation-crew";
 
-export default function Mark({ setCurrentCrew }) {
+export default function Mark() {
   return (
     <div className="crew-container">
       <div className="txt-box">
@@ -13,7 +12,6 @@ export default function Mark({ setCurrentCrew }) {
           company behind the Linux-based Ubuntu operating system. Shuttleworth
           became the first South African to travel to space as a space tourist.
         </p>
-        <NavigationCrew setCurrentCrew={setCurrentCrew} />
       </div>
       <div className="img-box img-mark"></div>
     </div>

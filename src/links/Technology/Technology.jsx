@@ -1,14 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 import Launch from "./links-technology/Launch";
-import Spaceport from "./links-technology/Spaceport";
-import Capsule from "./links-technology/Capsule";
 
-export default function Technology() {
+export default function Technology({setBcg}) {
   const [currentTechnology, setCurrentTechnology] = useState("");
   const [disableLaunch, setDisableLaunch] = useState("launched");
+
+  useEffect(() => {
+    setBcg("technology");
+  }, []);
+
   return (
     <section className="technology">
       <h2 className="h2-heading">

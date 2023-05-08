@@ -15,38 +15,38 @@ html {
 }
 
 #hero {
-  background-image: url("public/home/background-home-desktop.jpg");
+  background-image: url("/home/background-home-desktop.jpg");
 
   @media screen and (max-width: 900px) {
-    background-image: url("public/home/background-home-tablet.jpg");
+    background-image: url("/home/background-home-tablet.jpg");
   }
 }
 
 #destination {
-  background-image: url("public/destination/background-destination-desktop.jpg");
+  background-image: url("/destination/background-destination-desktop.jpg");
 
   @media screen and (max-width: 900px) {
-    background-image: url("public/destination/background-destination-tablet.jpg");
+    background-image: url("/destination/background-destination-tablet.jpg");
   }
 
   @media screen and (max-width: 450px) {
-    background-image: url("public/destination/background-destination-mobile.jpg");
+    background-image: url("/destination/background-destination-mobile.jpg");
   }
 }
 
 #crew {
-  background-image: url("public/crew/background-crew-desktop.jpg");
+  background-image: url("/crew/background-crew-desktop.jpg");
 
   @media screen and (max-width: 900px) {
-    background-image: url("public/crew/background-crew-tablet.jpg");
+    background-image: url("/crew/background-crew-tablet.jpg");
   }
 }
 
 #technology {
-  background-image: url("public/technology/background-technology-desktop.jpg");
+  background-image: url("/technology/background-technology-desktop.jpg");
 
   @media screen and (max-width: 900px) {
-    background-image: url("public/technology/background-technology-tablet.jpg");
+    background-image: url("technology/background-technology-tablet.jpg");
   }
 }
 

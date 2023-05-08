@@ -17,7 +17,7 @@ export default function Navigation() {
     <nav>
       <div className="logo">
         <Link to="/">
-          <img src="public/shared/logo.svg" alt="logo" />
+          <img src="/shared/logo.svg" alt="logo" />
         </Link>
         <div className="logo-line"></div>
       </div>

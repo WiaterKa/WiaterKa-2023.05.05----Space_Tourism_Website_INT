@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function NavigationCrew({ setCurrentCrew }) {
+export default function NavigationCrew() {
   return (
     <div className="nav-crew">
       <NavLink to="/crew/douglas" className="dot"></NavLink>

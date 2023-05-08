@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Moon() {
   return (
-    <div className="container-destination">
+    <motion.div
+      className="container-destination"
+      initial={{ x: "100rem" }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="img-container">
         <div className="img img-moon"></div>
       </div>
@@ -26,6 +32,6 @@ export default function Moon() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

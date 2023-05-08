@@ -14,6 +14,10 @@ import Technology from "./links/Technology/Technology";
 import Capsule from "./links/Technology/links-technology/Capsule";
 import Spaceport from "./links/Technology/links-technology/Spaceport";
 import Launch from "./links/Technology/links-technology/Launch";
+import Douglas from "./links/Crew/links-crew/Douglas";
+import Mark from "./links/Crew/links-crew/Mark";
+import Victor from "./links/Crew/links-crew/Victor";
+import Anousheh from "./links/Crew/links-crew/Anousheh";
 
 function App() {
   const [isBcg, setBcg] = useState("hero");
@@ -25,14 +29,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setBcg={setBcg} />} />
 
-        <Route path="/destination" element={<Destination setBcg={setBcg} />}>
-          <Route path="moon" element={<Moon />} />
-          <Route path="mars" element={<Mars />} />
-          <Route path="europa" element={<Europa />} />
-          <Route path="titan" element={<Titan />} />
-        </Route>
+        <Route
+          path="/destination/*"
+          element={<Destination setBcg={setBcg} />}
+        />
 
-        <Route path="/crew" element={<Crew setBcg={setBcg} />} />
+        <Route path="/crew/*" element={<Crew setBcg={setBcg} />} />
 
         <Route path="/technology" element={<Technology setBcg={setBcg} />}>
           <Route path="launch" element={<Launch />} />

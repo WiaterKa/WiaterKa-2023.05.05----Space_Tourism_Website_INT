@@ -81,7 +81,7 @@
       justify-content: center;
       align-items: flex-start;
       width: 50%;
-      // height: 65rem;
+
       position: relative;
       height: auto;
 
@@ -224,6 +224,6 @@
   }
 }
 
-[datatype="active"] {
+.active {
   opacity: 1 !important;
 }

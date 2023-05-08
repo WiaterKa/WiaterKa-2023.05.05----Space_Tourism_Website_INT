@@ -28,7 +28,7 @@ export default function Navigation() {
         <Link to="/destination/moon" element={<Destination />}>
           <span>01</span>Destination
         </Link>
-        <Link to="/crew" element={<Crew />}>
+        <Link to="/crew/douglas" element={<Crew />}>
           <span>02</span>Crew
         </Link>
         <Link to="/technology" element={<Technology />}>

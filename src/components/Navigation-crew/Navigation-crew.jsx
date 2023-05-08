@@ -1,53 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavigationCrew({ setCurrentCrew }) {
-  const allDots = Array.from(document.getElementsByClassName("dot"));
-  console.log(allDots);
-
-  function handleClick() {
-    allDots.map((element) => {
-      element.setAttribute("datatype", "");
-    });
-  }
-
   return (
     <div className="nav-crew">
-      <div
-        className="dot"
-        datatype=""
-        onClick={(event) => {
-          setCurrentCrew("Douglas");
-          handleClick();
-          event.target.setAttribute("datatype", "active");
-        }}
-      ></div>
-      <div
-        className="dot"
-        datatype=""
-        onClick={(event) => {
-          setCurrentCrew("Mark");
-          handleClick();
-          event.target.setAttribute("datatype", "active");
-        }}
-      ></div>
-      <div
-        className="dot"
-        datatype=""
-        onClick={(event) => {
-          setCurrentCrew("Victor");
-          handleClick();
-          event.target.setAttribute("datatype", "active");
-        }}
-      ></div>
-      <div
-        className="dot"
-        datatype=""
-        onClick={(event) => {
-          setCurrentCrew("Anousheh");
-          handleClick();
-          event.target.setAttribute("datatype", "active");
-        }}
-      ></div>
+      <NavLink to="/crew/douglas" className="dot"></NavLink>
+      <NavLink to="/crew/mark" className="dot"></NavLink>
+      <NavLink to="/crew/victor" className="dot"></NavLink>
+      <NavLink to="/crew/anousheh" className="dot"></NavLink>
     </div>
   );
 }

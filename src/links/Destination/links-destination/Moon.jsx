@@ -5,7 +5,7 @@ export default function Moon() {
   return (
     <motion.div
       className="container-destination"
-      initial={{ x: "100rem" }}
+      initial={{ x: "100vw" }}
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
     >

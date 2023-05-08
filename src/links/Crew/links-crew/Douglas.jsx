@@ -5,7 +5,7 @@ export default function Douglas() {
   return (
     <motion.div
     className="crew-container"
-      initial={{ x: "100rem" }}
+      initial={{ x: "110rem" }}
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
     >

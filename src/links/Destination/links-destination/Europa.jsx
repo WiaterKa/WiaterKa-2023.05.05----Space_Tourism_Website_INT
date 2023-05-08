@@ -5,8 +5,8 @@ export default function Europa() {
   return (
     <motion.div
       className="container-destination"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="img-container">

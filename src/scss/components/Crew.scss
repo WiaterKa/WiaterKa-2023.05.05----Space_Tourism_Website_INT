@@ -205,6 +205,10 @@
     top: 53rem;
   }
 
+  .active {
+    opacity: 1 !important;
+  }
+
   .dot {
     height: 1.5rem;
     width: 1.5rem;
@@ -216,10 +220,6 @@
     &:hover {
       mix-blend-mode: normal;
       opacity: 0.5;
-    }
-
-    &:focus {
-      opacity: 1;
     }
   }
 }

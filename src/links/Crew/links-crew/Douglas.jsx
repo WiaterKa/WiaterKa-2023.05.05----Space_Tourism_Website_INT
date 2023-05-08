@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 export default function Douglas() {
   return (
     <motion.div
-    className="crew-container"
-      initial={{ x: "110rem" }}
-      animate={{ x: 0 }}
+      className="crew-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="txt-box">

@@ -5,8 +5,8 @@ export default function Anousheh() {
   return (
     <motion.div
       className="crew-container"
-      initial={{ x: "110rem" }}
-      animate={{ x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="txt-box">

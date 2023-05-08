@@ -31,7 +31,7 @@ export default function Navigation() {
         <Link to="/crew/douglas" element={<Crew />}>
           <span>02</span>Crew
         </Link>
-        <Link to="/technology" element={<Technology />}>
+        <Link to="/technology/launch" element={<Technology />}>
           <span>03</span>Technology
         </Link>
       </div>

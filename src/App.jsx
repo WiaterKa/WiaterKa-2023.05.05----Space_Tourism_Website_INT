@@ -5,10 +5,6 @@ import Navigation from "./components/Navigation/Navigation";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./links/Home/Home";
 import Destination from "./links/Destination/Destination";
-import Moon from "./links/Destination/links-destination/Moon";
-import Mars from "./links/Destination/links-destination/Mars";
-import Europa from "./links/Destination/links-destination/Europa";
-import Titan from "./links/Destination/links-destination/Titan";
 import Crew from "./links/Crew/Crew";
 import Technology from "./links/Technology/Technology";
 import Capsule from "./links/Technology/links-technology/Capsule";
@@ -25,15 +21,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setBcg={setBcg} />} />
 
-        <Route path="/destination/*" element={<Destination setBcg={setBcg} />} />
+        <Route
+          path="/destination/*"
+          element={<Destination setBcg={setBcg} />}
+        />
 
         <Route path="/crew/*" element={<Crew setBcg={setBcg} />} />
 
-        <Route path="/technology" element={<Technology setBcg={setBcg} />}>
-          <Route path="launch" element={<Launch />} />
-          <Route path="spaceport" element={<Spaceport />} />
-          <Route path="capsule" element={<Capsule />} />
-        </Route>
+        <Route path="/technology/*" element={<Technology setBcg={setBcg} />} />
       </Routes>
     </div>
   );

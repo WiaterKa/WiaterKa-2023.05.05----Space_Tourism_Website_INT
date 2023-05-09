@@ -5,9 +5,9 @@ export default function Titan() {
   return (
     <motion.div
       className="container-destination"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <div className="img-container">
         <div className="img img-titan"></div>

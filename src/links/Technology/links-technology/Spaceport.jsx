@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Spaceport() {
   return (
     <>
-      <div className="txt-box">
+      <motion.div
+        className="txt-box"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <p className="p-heading">The terminology...</p>
         <h2>Spaceport</h2>
         <p className="p-primary">
@@ -12,8 +18,13 @@ export default function Spaceport() {
           aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
           situated to take advantage of the Earth’s rotation for launch.
         </p>
-      </div>
-      <div className="img-box spaceport-img"></div>
+      </motion.div>
+      <motion.div
+        className="img-box spaceport-img"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      ></motion.div>
     </>
   );
 }

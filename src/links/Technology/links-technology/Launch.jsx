@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Launch() {
   return (
     <>
-      <div className="txt-box">
+      <motion.div
+        className="txt-box"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <p className="p-heading">The terminology...</p>
         <h2>Launch Vehicle</h2>
         <p className="p-primary">
@@ -13,8 +19,13 @@ export default function Launch() {
           operation. Standing 150 metres tall, it's quite an awe-inspiring sight
           on the launch pad!
         </p>
-      </div>
-      <div className="img-box launch-img"></div>
+      </motion.div>
+      <motion.div
+        className="img-box launch-img"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      ></motion.div>
     </>
   );
 }

@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Capsule() {
   return (
     <>
-      <div className="txt-box">
+      <motion.div
+        className="txt-box"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <p className="p-heading">The terminology...</p>
         <h2>Space Capsule</h2>
         <p className="p-primary">
@@ -13,8 +19,13 @@ export default function Capsule() {
           a space gym, cinema, and plenty of other activities to keep you
           entertained.
         </p>
-      </div>
-      <div className="img-box capsule-img"></div>
+      </motion.div>
+      <motion.div
+        className="img-box capsule-img"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      ></motion.div>
     </>
   );
 }

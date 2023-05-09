@@ -5,8 +5,7 @@ import Launch from "./links-technology/Launch";
 import { Route, Routes } from "react-router-dom";
 import Spaceport from "./links-technology/Spaceport";
 import Capsule from "./links-technology/Capsule";
-import { AnimatePresence, MotionConfig } from "framer-motion";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export default function Technology({ setBcg }) {
   useEffect(() => {
@@ -16,12 +15,7 @@ export default function Technology({ setBcg }) {
   const location = useLocation();
 
   return (
-    <motion.div
-      className="technology"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <section className="technology">
       <h2 className="h2-heading">
         <span>O3</span>Space Launch 101
       </h2>
@@ -47,6 +41,6 @@ export default function Technology({ setBcg }) {
           </Routes>
         </AnimatePresence>
       </div>
-    </motion.div>
+    </section>
   );
 }
